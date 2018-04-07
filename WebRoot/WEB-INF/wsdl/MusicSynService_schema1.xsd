@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.dustray.cn/" targetNamespace="http://services.dustray.cn/" version="1.0">
+
+  <xs:element name="continueMusic" type="tns:continueMusic"/>
+
+  <xs:element name="continueMusicResponse" type="tns:continueMusicResponse"/>
+
+  <xs:element name="getMusicLength" type="tns:getMusicLength"/>
+
+  <xs:element name="getMusicLengthResponse" type="tns:getMusicLengthResponse"/>
+
+  <xs:element name="getSynTime" type="tns:getSynTime"/>
+
+  <xs:element name="getSynTimeResponse" type="tns:getSynTimeResponse"/>
+
+  <xs:element name="pauseMusic" type="tns:pauseMusic"/>
+
+  <xs:element name="pauseMusicResponse" type="tns:pauseMusicResponse"/>
+
+  <xs:complexType name="getMusicLength">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMusicLengthResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSynTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSynTimeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="continueMusic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="continueMusicResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pauseMusic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pauseMusicResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
